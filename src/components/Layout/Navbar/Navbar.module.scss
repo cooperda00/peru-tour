@@ -1,0 +1,95 @@
+@import "../../../vars";
+
+.Navbar {
+  @include flex(row, space-around, center);
+
+  height: 100px;
+  position: relative;
+  width: 100%;
+
+  h1 {
+    @include font("XXL");
+
+    span {
+      color: $primary;
+    }
+  }
+}
+
+.MenuBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  .LogoIcon {
+    color: $primary;
+    font-size: $fontL;
+  }
+
+  @include min-width(1000px) {
+    display: none;
+  }
+}
+
+.NavLinks {
+  display: none;
+
+  @include min-width(1000px) {
+    @include flex(row, space-around, center);
+    @include font("M");
+
+    list-style: none;
+    width: 45%;
+
+    a {
+      font-weight: bold;
+      padding: 0 2rem;
+      transition: 0.2s;
+    }
+
+    a:hover {
+      color: $primary;
+    }
+  }
+}
+
+.NavSocialLinks {
+  display: none;
+
+  @include min-width(1000px) {
+    @include flex(row);
+
+    a {
+      @include font("M");
+
+      margin: 0 1rem;
+      transition: 0.2s;
+    }
+
+    a:hover {
+      color: $primary;
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.NavMenu {
+  @include flex(row, space-around, center);
+
+  list-style: none;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  background: white;
+
+  a {
+    @include font("S");
+
+    font-weight: bold;
+    transition: 0.2s;
+  }
+
+  a:hover {
+    color: $primary;
+  }
+}

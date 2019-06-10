@@ -1,0 +1,9 @@
+@import "../../vars";
+
+.ErrorPage {
+  @include flex(column, center, center);
+
+  background: $primary;
+  min-height: calc(80vh - 100px);
+  width: 100%;
+}

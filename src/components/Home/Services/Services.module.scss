@@ -1,0 +1,53 @@
+@import "../../../vars";
+
+.ServicesContainer {
+  background: $lightgray;
+  min-height: 65vh;
+  padding: 6rem 0;
+  width: 100%;
+}
+
+.Services {
+  @include flex(column, flex-start, center);
+
+  width: 100%;
+  margin-top: 3rem;
+
+  @include min-width(1000px) {
+    @include flex(row, space-around, center);
+  }
+}
+
+.Service {
+  @include flex(column, flex-start, center);
+  padding: 3rem;
+  max-width: 400px;
+
+  .Icon {
+    @include font("XL");
+    @include flex(column, center, center);
+
+    height: 80px;
+    width: 80px;
+    background: $primary;
+    color: white;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+  }
+
+  h2 {
+    @include font("L");
+
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    @include font("M");
+  }
+
+  @include min-width(1000px) {
+    max-width: 550px;
+  }
+}

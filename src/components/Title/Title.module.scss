@@ -1,0 +1,25 @@
+@import "../../vars";
+
+.Title {
+  @include font("XL");
+
+  letter-spacing: 7px;
+  line-height: $lineL;
+  text-align: center;
+
+  .Colored {
+    color: $primary;
+  }
+
+  span {
+    display: block;
+  }
+
+  @include min-width(768px) {
+    line-height: $lineXL;
+
+    span {
+      display: inline-block;
+    }
+  }
+}

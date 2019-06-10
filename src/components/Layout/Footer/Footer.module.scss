@@ -1,0 +1,60 @@
+@import "../../../vars";
+
+.Footer {
+  @include flex(column, space-around, center);
+
+  background: $charcoal;
+  min-height: 20vh;
+  padding-top: 3rem;
+  width: 100%;
+}
+
+.Links {
+  @include flex(row, space-around);
+
+  list-style: none;
+  max-width: 1000px;
+  width: 100%;
+
+  li {
+    a {
+      @include font("S");
+
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: 0.2s;
+    }
+
+    a:hover {
+      color: $primary;
+    }
+  }
+}
+
+.SocialIcons {
+  @include flex(row, center);
+
+  list-style: none;
+
+  li {
+    margin: 0 2rem;
+
+    a {
+      @include font("L");
+
+      color: white;
+      transition: 0.2s;
+    }
+
+    a:hover {
+      color: $primary;
+    }
+  }
+}
+
+.Copyright {
+  @include font("S");
+
+  color: white;
+}

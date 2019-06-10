@@ -1,0 +1,72 @@
+@import "../../../vars";
+
+.About {
+  @include flex(column, flex-start, center);
+
+  background: white;
+  min-height: 65vh;
+  padding: 6rem 0;
+  width: 100%;
+}
+
+.Content {
+  @include flex(column, flex-start, center);
+
+  margin: 3rem 0;
+  padding: 0 5rem;
+
+  @include min-width(1000px) {
+    @include flex(row, space-around, center);
+    width: 100%;
+  }
+}
+
+.DisplayImage {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+
+  .Border {
+    width: 100%;
+    height: 100%;
+    top: -5px;
+    left: -5px;
+    border: 3px solid $primary;
+    position: absolute;
+    z-index: 10;
+  }
+
+  img {
+    width: 100%;
+    top: 10px;
+    left: 10px;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 100;
+  }
+}
+
+.Copy {
+  @include font("S");
+
+  max-width: 700px;
+  margin-top: 6rem;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  button {
+    margin-top: 2rem;
+  }
+
+  @include min-width(1000px) {
+    @include font("M");
+
+    margin-top: 0rem;
+  }
+}
