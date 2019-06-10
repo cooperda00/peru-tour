@@ -15,7 +15,7 @@
   margin: 3rem 0;
   padding: 0 5rem;
 
-  @include min-width(1000px) {
+  @include min-width(1400px) {
     @include flex(row, space-around, center);
     width: 100%;
   }
@@ -29,19 +29,15 @@
   .Border {
     width: 100%;
     height: 100%;
-    top: -5px;
-    left: -5px;
+    top: -15px;
+    left: -15px;
     border: 3px solid $primary;
     position: absolute;
     z-index: 10;
   }
 
-  img {
-    width: 100%;
-    top: 10px;
-    left: 10px;
+  .Image {
     box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.6);
-    position: relative;
     z-index: 100;
   }
 }
@@ -64,7 +60,7 @@
     margin-top: 2rem;
   }
 
-  @include min-width(1000px) {
+  @include min-width(1400px) {
     @include font("M");
 
     margin-top: 0rem;

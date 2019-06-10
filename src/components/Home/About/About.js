@@ -1,20 +1,24 @@
 //Modules
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 //Sass
 import styles from "./About.module.scss"
 //Components
 import Title from "../../Title/Title"
-//Images
-import img from "../../../images/peruhero.jpg"
 
 const About = () => {
+  const data = useStaticQuery(query)
+  const image = data.image.childImageSharp.fluid
+
   return (
     <section className={styles.About}>
       <Title title="About" subtitle="Us" />
+
       <div className={styles.Content}>
         <div className={styles.DisplayImage}>
           <div className={styles.Border}></div>
-          <img src={img} alt="A view over Machu Picchu" />
+          <Img fluid={image} className={styles.Image} />
         </div>
 
         <div className={styles.Copy}>
@@ -33,5 +37,17 @@ const About = () => {
     </section>
   )
 }
+
+const query = graphql`
+  {
+    image: file(relativePath: { eq: "cusco.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
 
 export default About

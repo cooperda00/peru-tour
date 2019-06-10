@@ -1,7 +1,7 @@
 //Modules
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import Fade from "react-reveal/Fade"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 //Sass
 import styles from "./Navbar.module.scss"
 //Icons
@@ -15,22 +15,23 @@ const Navbar = () => {
 
   const toggleNav = () => {
     setNav(!isOpen)
-    console.log(isOpen)
   }
 
   return (
     <header className={styles.Navbar}>
-      <h1>
-        Peru<span>Tour</span>
-      </h1>
+      <AniLink fade to="/">
+        <h1>
+          Peru<span>Tour</span>
+        </h1>
+      </AniLink>
 
       <ul className={styles.NavLinks}>
         {links.map((item, index) => {
           return (
             <li key={index}>
-              <Link to={item.path} activeStyle={{ color: "#d91023" }}>
+              <AniLink fade to={item.path} activeStyle={{ color: "#d91023" }}>
                 {item.text.toUpperCase()}
-              </Link>
+              </AniLink>
             </li>
           )
         })}
@@ -60,9 +61,9 @@ const Navbar = () => {
           {links.map((item, index) => {
             return (
               <li key={index}>
-                <Link to={item.path} activeStyle={{ color: "#d91023" }}>
+                <AniLink fade to={item.path} activeStyle={{ color: "#d91023" }}>
                   {item.text.toUpperCase()}
-                </Link>
+                </AniLink>
               </li>
             )
           })}

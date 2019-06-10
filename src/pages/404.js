@@ -1,6 +1,6 @@
 //Modules
 import React from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Layout from "../components/Layout/Layout"
 import Banner from "../components/Banner/Banner"
 import styles from "./pageStyles/ErrorPage.module.scss"
@@ -14,7 +14,9 @@ const ErrorPage = () => {
           info="We messed up. Try heading home"
         >
           <button className="btn-white">
-            <Link to="/">Head Home</Link>
+            <AniLink fade to="/">
+              Head Home
+            </AniLink>
           </button>
         </Banner>
       </section>
