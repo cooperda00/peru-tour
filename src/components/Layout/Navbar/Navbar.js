@@ -1,7 +1,7 @@
 //Modules
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import Fade from "react-reveal/fade"
+import Fade from "react-reveal/Fade"
 //Sass
 import styles from "./Navbar.module.scss"
 //Icons
@@ -55,7 +55,6 @@ const Navbar = () => {
         <FaAlignRight className={styles.LogoIcon} />
       </button>
 
-      {/* {isOpen && ( */}
       <Fade top when={isOpen} duration={500}>
         <ul className={styles.NavMenu}>
           {links.map((item, index) => {
@@ -69,7 +68,6 @@ const Navbar = () => {
           })}
         </ul>
       </Fade>
-      {/* )} */}
     </header>
   )
 }
