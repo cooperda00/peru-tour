@@ -15,6 +15,7 @@ const ContactForm = () => {
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        action="/success"
       >
         <div className={styles.InputGroup}>
           <label htmlFor="name">Name: </label>
