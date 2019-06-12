@@ -14,7 +14,7 @@ const Tours = () => {
   return (
     <Layout>
       <StyledHero img={miraflores}>
-        <h1>I am a tour page</h1>
+        <h1>I am TOUR</h1>
       </StyledHero>
     </Layout>
   )
