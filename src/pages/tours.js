@@ -2,20 +2,20 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 //Sass
-// import styles from "./pageStyles/Tours.module.scss"
+// import styles from "./pageStyles/ToursPage.module.scss"
 //Components
 import Layout from "../components/Layout/Layout"
 import StyledHero from "../components/StyledHero/StyledHero"
+import Tours from "../components/Tours/Tours/Tours"
 
-const Tours = () => {
+const ToursPage = () => {
   const data = useStaticQuery(query)
   const miraflores = data.miraflores.childImageSharp.fluid
 
   return (
     <Layout>
-      <StyledHero img={miraflores}>
-        <h1>I am TOUR</h1>
-      </StyledHero>
+      <StyledHero img={miraflores} />
+      <Tours />
     </Layout>
   )
 }
@@ -32,4 +32,4 @@ const query = graphql`
   }
 `
 
-export default Tours
+export default ToursPage

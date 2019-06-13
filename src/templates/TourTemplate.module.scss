@@ -1,0 +1,89 @@
+@import "../vars";
+
+.TourTemplate {
+  width: 100%;
+}
+
+.Content {
+  @include flex(column, flex-start, center);
+
+  width: 100%;
+  padding: 0 3rem 6rem 3rem;
+
+  h1 {
+    margin-bottom: 3rem;
+  }
+}
+
+.ImagesContainer {
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.SingleImageContainer {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  margin: 3rem 0;
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.4);
+
+  .Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include min-width(1000px) {
+    margin-right: 3rem;
+  }
+}
+
+.Title {
+  @include font("XL");
+  letter-spacing: 5px;
+}
+
+.Info {
+  @include flex(row, space-between, center);
+  width: 100%;
+  max-width: 700px;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+
+  h2 {
+    @include font("M");
+    letter-spacing: 3px;
+
+    .Icon {
+      color: $primary;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.ExtraInfo {
+  @include font("S");
+  @include flex(column, flex-start, flex-start);
+
+  width: 100%;
+  max-width: 700px;
+
+  h3 {
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+  }
+}
+
+.Description {
+  @include font("S");
+
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+
+.Itinerary {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 3rem;
+}

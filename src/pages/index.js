@@ -8,6 +8,7 @@ import StyledHero from "../components/StyledHero/StyledHero"
 import Banner from "../components/Banner/Banner"
 import About from "../components/Home/About/About"
 import Services from "../components/Home/Services/Services"
+import FeaturedTours from "../components/Home/FeaturedTours/FeaturedTours"
 
 const Index = () => {
   const data = useStaticQuery(query)
@@ -15,7 +16,7 @@ const Index = () => {
 
   return (
     <Layout>
-      <StyledHero home={true} img={image}>
+      <StyledHero home="true" img={image}>
         <Banner
           title="Explore Peru The Right Way"
           info="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod totam
@@ -30,6 +31,7 @@ const Index = () => {
       </StyledHero>
       <About />
       <Services />
+      <FeaturedTours />
     </Layout>
   )
 }

@@ -1,0 +1,15 @@
+@import "../../../vars";
+
+.TourList {
+  padding: 6rem 0;
+  min-height: 50vh;
+  width: 100%;
+}
+
+.CardContainer {
+  @include flex(row, center, center);
+
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}

@@ -1,0 +1,25 @@
+@import "../../../vars";
+
+.Day {
+  width: 100%;
+
+  h4 {
+    @include font("M");
+    @include flex(row, space-between, center);
+
+    letter-spacing: 4px;
+  }
+
+  p {
+    @include font("S");
+  }
+}
+
+.ShowButton {
+  @include font("M");
+
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: $primary;
+}
