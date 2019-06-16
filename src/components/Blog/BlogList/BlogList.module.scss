@@ -1,0 +1,12 @@
+@import "../../../vars";
+
+.BlogList {
+  @include flex(column, flex-start, center);
+  width: 100%;
+}
+
+.CardContainer {
+  @include flex(row, center, flex-start);
+  flex-wrap: wrap;
+  width: 80%;
+}

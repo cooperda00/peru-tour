@@ -1,0 +1,51 @@
+@import "../../../vars";
+
+.BlogCard {
+  height: 200px;
+  width: 300px;
+  background: white;
+  margin: 3rem;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+
+  @include min-width(600px) {
+    height: 300px;
+    width: 400px;
+  }
+}
+
+.Top {
+  position: relative;
+  width: 100%;
+  height: 70%;
+}
+
+.Image {
+  height: 100%;
+}
+
+.Published {
+  @include font("S");
+  padding: 5px 10px;
+  color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  background: $primary;
+  top: 20px;
+}
+
+.Bottom {
+  @include flex(column, center, center);
+
+  height: 30%;
+  padding: 1rem;
+
+  h2 {
+    @include font("S");
+    text-align: center;
+
+    @include min-width(600px) {
+      @include font("M");
+    }
+  }
+}

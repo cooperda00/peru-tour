@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 //Components
 import Layout from "../components/Layout/Layout"
 import StyledHero from "../components/StyledHero/StyledHero"
+import BlogList from "../components/Blog/BlogList/BlogList"
 
 const Blog = () => {
   const data = useStaticQuery(query)
@@ -11,9 +12,8 @@ const Blog = () => {
 
   return (
     <Layout>
-      <StyledHero img={amazon}>
-        <h1>Blog goes here</h1>
-      </StyledHero>
+      <StyledHero img={amazon} />
+      <BlogList />
     </Layout>
   )
 }

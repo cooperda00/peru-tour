@@ -1,0 +1,92 @@
+@import "../vars";
+
+.BlogTemplate {
+  width: 100%;
+}
+
+.Blog {
+  @include flex(column, flex-start, center);
+
+  width: 100%;
+  padding: 0 3rem 6rem 3rem;
+  margin-top: 6rem;
+
+  .MainTitle {
+    @include font("XL");
+  }
+
+  .Published {
+    @include font("M");
+    margin-bottom: 3rem;
+  }
+
+  button {
+    margin-top: 3rem;
+  }
+}
+
+.Article {
+  max-width: 900px;
+
+  h1 {
+    @include font("M");
+    margin-bottom: 2rem;
+  }
+
+  p {
+    @include font("S");
+    margin-bottom: 1rem;
+  }
+
+  hr {
+    margin: 3rem 0;
+  }
+}
+
+.ImageContainer {
+  width: 100%;
+  margin-bottom: 3rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.RelatedTour {
+  margin: 5rem 0;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+
+  h1 {
+    @include font("L");
+  }
+
+  h2 {
+    @include font("M");
+  }
+
+  p {
+    @include font("S");
+  }
+
+  img {
+    max-width: 300px;
+  }
+}
+
+.TourWrapper {
+  @include flex(column, flex-start, flex-start);
+
+  div {
+    margin-top: 2rem;
+  }
+
+  @include min-width(768px) {
+    @include flex(row, center, flex-start);
+
+    div {
+      padding-left: 2rem;
+      margin-top: 0;
+    }
+  }
+}
