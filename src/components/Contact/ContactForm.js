@@ -30,6 +30,7 @@ const ContactForm = () => {
             onBlur={e => {
               e.target.placeholder = "John Smith"
             }}
+            required
           />
         </div>
 
@@ -46,6 +47,7 @@ const ContactForm = () => {
             onBlur={e => {
               e.target.placeholder = "smith_jo@example.com"
             }}
+            required
           />
         </div>
 
@@ -61,6 +63,7 @@ const ContactForm = () => {
             onBlur={e => {
               e.target.placeholder = "Dear Sir/Madame... "
             }}
+            required
           ></textarea>
         </div>
 

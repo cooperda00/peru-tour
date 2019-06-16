@@ -8,6 +8,7 @@ import styles from "./BlogTemplate.module.scss"
 //Components
 import Layout from "../components/Layout/Layout"
 import StyledHero from "../components/StyledHero/StyledHero"
+import SEO from "../components/SEO/SEO"
 
 const blogTemplate = ({ data: { singleBlog } }) => {
   const {
@@ -54,6 +55,7 @@ const blogTemplate = ({ data: { singleBlog } }) => {
 
   return (
     <Layout>
+      <SEO title={title} />
       <main className={styles.BlogTemplate}>
         <StyledHero img={mainImage.fluid} />
         <section className={styles.Blog}>
@@ -64,11 +66,9 @@ const blogTemplate = ({ data: { singleBlog } }) => {
             {documentToReactComponents(json, options)}
           </article>
 
-          <button className="btn-primary">
-            <AniLink fade to="/blog">
-              All Posts
-            </AniLink>
-          </button>
+          <AniLink fade to="/blog" className="btn-primary">
+            All Posts
+          </AniLink>
         </section>
       </main>
     </Layout>

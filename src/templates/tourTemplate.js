@@ -9,6 +9,7 @@ import styles from "./TourTemplate.module.scss"
 import Layout from "../components/Layout/Layout"
 import StyledHero from "../components/StyledHero/StyledHero"
 import Day from "../components/SingleTour/Day/Day"
+import SEO from "../components/SEO/SEO"
 //Icons
 import { FaMoneyBillWave, FaMap } from "react-icons/fa"
 
@@ -28,6 +29,7 @@ const tourTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={name} />
       <main className={styles.TourTemplate}>
         <StyledHero img={mainImage.fluid} />
         <section className={styles.Content}>
@@ -68,9 +70,9 @@ const tourTemplate = ({ data }) => {
             })}
           </div>
 
-          <button className="btn-primary">
-            <AniLink>Back To Tours</AniLink>
-          </button>
+          <AniLink fade to="/tours" className="btn-primary">
+            Back To Tours
+          </AniLink>
         </section>
       </main>
     </Layout>

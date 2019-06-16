@@ -9,6 +9,7 @@ import Banner from "../components/Banner/Banner"
 import About from "../components/Home/About/About"
 import Services from "../components/Home/Services/Services"
 import FeaturedTours from "../components/Home/FeaturedTours/FeaturedTours"
+import SEO from "../components/SEO/SEO"
 
 const Index = () => {
   const data = useStaticQuery(query)
@@ -16,17 +17,16 @@ const Index = () => {
 
   return (
     <Layout>
+      <SEO title="Home" />
       <StyledHero home="true" img={image}>
         <Banner
           title="Explore Peru The Right Way"
           info="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod totam
         impedit, enim, voluptatibus alias incidunt nemo aspernatur dignissimos."
         >
-          <button className="btn-white">
-            <AniLink fade to="/tours">
-              Explore Tours
-            </AniLink>
-          </button>
+          <AniLink fade to="/tours" className="btn-white">
+            Explore Tours
+          </AniLink>
         </Banner>
       </StyledHero>
       <About />

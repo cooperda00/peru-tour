@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import StyledHero from "../components/StyledHero/StyledHero"
 import ContactForm from "../components/Contact/ContactForm"
+import SEO from "../components/SEO/SEO"
 
 const Contact = () => {
   const data = useStaticQuery(query)
@@ -12,6 +13,7 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO title="Contact" />
       <StyledHero img={nazca} />
       <ContactForm />
     </Layout>

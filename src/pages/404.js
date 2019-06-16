@@ -1,13 +1,17 @@
 //Modules
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+//Sass
+import styles from "./pageStyles/ErrorPage.module.scss"
+//Components
+import SEO from "../components/SEO/SEO"
 import Layout from "../components/Layout/Layout"
 import Banner from "../components/Banner/Banner"
-import styles from "./pageStyles/ErrorPage.module.scss"
 
 const ErrorPage = () => {
   return (
     <Layout>
+      <SEO title="Page Not Found" />
       <section className={styles.ErrorPage}>
         <Banner
           title="Oops, there was an error"

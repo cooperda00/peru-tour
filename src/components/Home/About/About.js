@@ -2,6 +2,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 //Sass
 import styles from "./About.module.scss"
 //Components
@@ -31,7 +32,10 @@ const About = () => {
             Architecto sint nihil accusantium voluptatibus. Esse a atque ipsam
             ad? Atque, eos.
           </p>
-          <button className="btn-primary">Read More</button>
+
+          <AniLink fade to="/tours" className={`${styles.Button} btn-primary`}>
+            View Tours
+          </AniLink>
         </div>
       </div>
     </section>

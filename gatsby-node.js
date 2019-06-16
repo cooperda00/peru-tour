@@ -42,4 +42,29 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  // amount of posts
+  const posts = data.posts.edges.length
+  // posts per page
+  const postsPerPage = 6
+  // calculate how many pages needed
+  const numOfPages = Math.ceil(posts / postsPerPage)
+  // creates pages based on the number calculated
+  Array.from({ length: numOfPages }).forEach((_, i) => {
+    createPage({
+      //generate correct path
+      path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+      //Point to template
+      component: path.resolve("./src/templates/blogListTemplate.js"),
+      context: {
+        limit: postsPerPage,
+        // calculate how many posts to skip on each new page
+        skip: i * postsPerPage,
+        // pass numOfPages for generating buttons
+        numOfPages,
+        // get current page ( 0 index plus 1) for buttons
+        currentPage: i + 1,
+      },
+    })
+  })
 }

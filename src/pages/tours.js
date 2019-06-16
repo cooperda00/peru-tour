@@ -1,12 +1,11 @@
 //Modules
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-//Sass
-// import styles from "./pageStyles/ToursPage.module.scss"
 //Components
 import Layout from "../components/Layout/Layout"
 import StyledHero from "../components/StyledHero/StyledHero"
 import Tours from "../components/Tours/Tours/Tours"
+import SEO from "../components/SEO/SEO"
 
 const ToursPage = () => {
   const data = useStaticQuery(query)
@@ -14,6 +13,7 @@ const ToursPage = () => {
 
   return (
     <Layout>
+      <SEO title="Tours" />
       <StyledHero img={miraflores} />
       <Tours />
     </Layout>

@@ -5,10 +5,12 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styles from "./pageStyles/Success.module.scss"
 //Components
 import Layout from "../components/Layout/Layout"
+import SEO from "../components/SEO/SEO"
 
 const success = () => {
   return (
     <Layout>
+      <SEO title="Success" />
       <section className={styles.Success}>
         <h1>Success!</h1>
         <h2>Thank you for your submission</h2>

@@ -19,7 +19,6 @@ html {
 a:link,
 a:visited {
   text-decoration: none;
-  color: inherit;
 }
 
 p,
@@ -68,7 +67,7 @@ a {
   padding: 0.5rem 3rem;
   transition: 0.5s;
 
-  a .btn-white {
+  a .btn-primary {
     color: white;
   }
 

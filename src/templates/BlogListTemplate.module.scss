@@ -1,0 +1,25 @@
+@import "../vars";
+
+.BlogList {
+  width: 100%;
+  margin: 6rem 0;
+}
+
+.PageControls {
+  @include flex(row, center, center);
+
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+
+  a {
+    margin: 0 2rem;
+  }
+}
+
+.Selected {
+  background: white;
+  border: 2px solid black;
+  color: $darkgray;
+  font-weight: bold;
+}
