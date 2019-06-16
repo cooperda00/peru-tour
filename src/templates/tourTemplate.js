@@ -10,7 +10,7 @@ import Layout from "../components/Layout/Layout"
 import StyledHero from "../components/StyledHero/StyledHero"
 import Day from "../components/SingleTour/Day/Day"
 //Icons
-import { FaMoneyBillWave, FaMap } from "react-icons/Fa"
+import { FaMoneyBillWave, FaMap } from "react-icons/fa"
 
 const tourTemplate = ({ data }) => {
   const {
