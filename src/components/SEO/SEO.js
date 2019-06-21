@@ -7,14 +7,7 @@ const SEO = ({ title, description }) => {
   const {
     site: { siteMetadata },
   } = useStaticQuery(query)
-  const {
-    siteTitle,
-    siteDesc,
-    author,
-    siteUrl,
-    image,
-    twitterUsername,
-  } = siteMetadata
+  const { siteTitle, siteDesc, siteUrl, image, twitterUsername } = siteMetadata
 
   return (
     <Helmet htmlAttributes={{ lang: "en" }}>

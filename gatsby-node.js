@@ -46,7 +46,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // amount of posts
   const posts = data.posts.edges.length
   // posts per page
-  const postsPerPage = 6
+  const postsPerPage = 3
   // calculate how many pages needed
   const numOfPages = Math.ceil(posts / postsPerPage)
   // creates pages based on the number calculated
